@@ -1,0 +1,270 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+.container {
+    width: 80%;
+    margin: 3rem auto;
+}
+
+.back {
+    text-decoration: none;
+    color: #9B9B9B;
+}
+
+.back span {
+    margin-left: 0.5rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.header > * {
+    width: 80%;
+    margin-bottom: 1rem;
+}
+
+header img {
+    width: 282px;
+    height: 181px;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 0.5rem 1.25rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.edit {
+    background-color: #969595;
+}
+
+.delete {
+    background-color: #FF3D44;
+}
+
+h1, h2 {
+    color: #383838;
+}
+
+.date {
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+    color: #9B9B9B;
+}
+
+.number {
+    font-size: 16px;
+    line-height: 18px;
+    font-family: 'Raleway', sans-serif;
+    font-feature-settings: 'pnum' on, 'lnum' on !important;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.content a {
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
+    height: 18rem;
+    padding: 2rem 2rem;
+    text-decoration: none;
+}
+
+
+.add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.news {
+    position: relative;
+    cursor: pointer;
+}
+
+.news img {
+    position: absolute;
+    top: -0.25rem;
+    right: -0.5rem;
+}
+
+.news > *:nth-last-child(n) {
+    margin-bottom: 1rem;
+}
+
+.news p {
+    color: #9B9B9B;
+}
+
+.pagination {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: none;
+    margin-left: 1rem;
+    text-decoration: none;
+}
+
+.pagination > a {
+    cursor: pointer;
+}
+
+.active {
+    background-color: #EBEBEB;
+}
+
+/*Модальное окно*/
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+    opacity: 0;
+    transition: opacity 200ms ease-in;
+    pointer-events: none;
+}
+
+.modal:target {
+    opacity: 1;
+    pointer-events: auto;
+    overflow-y: auto;
+}
+
+.modal-dialog {
+    position: relative;
+    width: 80%;
+    margin: 10px;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: .3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    outline: 0;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: bold;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+.close {
+    float: right;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    text-decoration: none;
+}
+
+.close:focus, .close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .75;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 1 1 auto;
+    padding: 15px;
+    overflow: auto;
+}
+
+.modal-body input[type="text"], .modal-body textarea {
+    border: 1px solid #E1E1E1;
+    padding-left: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    width: 98%;
+    font-size: 16px;
+    line-height: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+.modal-body input[type="text"] {
+    height: 3rem;
+}
+
+.modal-body textarea {
+    padding-top: 1rem;
+    overflow-y: scroll;
+    resize: none;
+}
+
+.modal-body p {
+    color: #909090;
+    margin-bottom: 1rem;
+}
+
+.modal-body div {
+    margin-top: 1rem;
+}
+
+.save {
+    text-decoration: none;
+    background: #6A93FD;
+    border-radius: 5px;
+    padding: 0.5rem 1.25rem;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-close {
+    color: #9B9B9B;
+    text-decoration: none;
+    padding: 0.5rem 1.25rem;
+    cursor: pointer;
+    border: none;
+}
